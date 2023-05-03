@@ -1,0 +1,9 @@
+.fondo-image {
+    background-image: url('../../public/images/IPUC\ Llanaditas\ 2.png') !important;
+  }
+  .bg-boton {
+    background-color:#00307B !important;
+  }
+  .opacity { 
+  opacity: 0.5;
+  }
