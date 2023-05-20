@@ -16,6 +16,14 @@
   <script src="https://right-distinct.tailwindui.com/script.js" data-site="SOXJJCZQ" data-auto="false" defer=""></script>
   <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
   <script type="module" src="https://tailwindui.com/build/assets/app-9780190a.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+ <style>
+ body {
+    background-color: #F3F4F6 !important;
+}
+
+ </style>
+
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
  <style>
@@ -41,14 +49,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-
-         
-                <a class="navbar-brand " href="{{ url('/') }}">
-                       
-            <?php
-        include 'images/IPUC Llanaditas Amarillo y azul.svg'
-        ?>
-        
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
                 </a>
                           
       <div class="hidden md:block  grid grid-cols-3 gap-4 font-semibold ">
@@ -111,8 +113,6 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                     </ul>
-                    
-
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
@@ -121,7 +121,6 @@
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-
                                 </li>
                             @endif
 
@@ -153,7 +152,6 @@
                 </div>
             </div>
         </nav>
-
         <nav class="bg-white shadow">
   <div class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
@@ -305,15 +303,11 @@
  
 </nav>
 
-
             <main class="py-4">
                 @yield('content')
             </main>
         </div>
-
-        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-
+       
 </body>
 <script>
     // Obtener el botón y el menú
@@ -337,5 +331,4 @@
     });
 
     </script>
-
 </html>
