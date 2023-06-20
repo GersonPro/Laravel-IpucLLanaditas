@@ -1,8 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Models\Membership;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $memberships = Membership::all();
+
+        foreach ($memberships as $member) {
+            $birthDate = Carbon::createFromFormat('d/m/Y', $member->bir_date);
+            $age = Carbon::now()->diffInYears($birthDate);
+            $member->age = $age;
+        }
+
+        return view('home', ['memberships' => $memberships]);
     }
 }

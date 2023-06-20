@@ -82,22 +82,30 @@
             
         </thead>
         <tbody>
+            @foreach($memberships as $member)
             <tr class="bg-white    dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 
                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                 <img class="w-10 h-10 rounded-full" src="/images/Ellipse 3.png" alt="Rounded avatar">
                     <div class="pl-3">
-                        <div class="text-base  text-gray-700 font-semibold">Neil Sims</div>
-                        <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
+                        <div class="text-base  text-gray-700 font-semibold">{{$member['name']}}</div>
+                        <div class="font-normal text-gray-500">Edad: {{$member['age']}}</div>
+
                     </div>  
                 </th>
                 
                 <td class="px-6 py-4">
-                <div class="font-normal  text-gray-700 font-semibold">Neil Sims</div>
-                        <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
+                <div class="font-normal  text-gray-700 font-semibold">    @if($member['chris_date'])
+                    Bautizado
+                @else
+                    No bautizado
+                @endif</div>
+                        <div class="font-normal text-gray-500">{{$member['chris_date']}}</div>
                 </td>
+
                 <td class="px-6 py-4">
-                    React Developer
+                <div class="font-normal  text-gray-700 font-semibold">Espiritu Santo</div>
+                        <div class="font-normal text-gray-500">{{$member['h_spirit']}}</div>
                 </td>
                 
                 
@@ -111,107 +119,7 @@
                     <a href="#" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Edit </a>
                 </td>
             </tr>
-            
-            <tr class="bg-white  dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                
-                <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <img class="w-10 h-10 rounded-full" src="/images/Ellipse 3.png" alt="Rounded avatar">
-                    <div class="pl-3">
-                        <div class="text-base text-gray-700 font-semibold">Bonnie Green</div>
-                        <div class="font-normal text-gray-500">bonnie@flowbite.com</div>
-                    </div>
-                </th>
-                <td class="px-6 py-4">
-                <div class="font-normal  text-gray-700 font-semibold">Neil Sims</div>
-                        <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
-                </td>
-                <td class="px-6 py-4">
-                    Designer
-                </td>
-                <td class="px-6 py-4">
-                    <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
-                    </div>
-                </td>
-                <td class="px-6 py-4">
-                <a href="#" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Edit </a>
-                </td>
-            </tr>
-            <tr class="bg-white  dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                
-                <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <img class="w-10 h-10 rounded-full" src="/images/Ellipse 3.png" alt="Rounded avatar">
-                    <div class="pl-3">
-                        <div class="text-base text-gray-700 font-semibold">Jese Leos</div>
-                        <div class="font-normal text-gray-500">jese@flowbite.com</div>
-                    </div>
-                </th>
-                <td class="px-6 py-4">
-                <div class="font-normal  text-gray-700 font-semibold">Neil Sims</div>
-                        <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
-                </td>
-                <td class="px-6 py-4">
-                    Vue JS Developer
-                </td>
-                <td class="px-6 py-4">
-                    <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
-                    </div>
-                </td>
-                <td class="px-6 py-4">
-                <a href="#" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Edit </a>
-                </td>
-            </tr>
-            <tr class="bg-white  dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-              
-                <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <img class="w-10 h-10 rounded-full" src="/images/Ellipse 3.png" alt="Rounded avatar">
-                    <div class="pl-3">
-                        <div class="text-base text-gray-700 font-semibold">Thomas Lean</div>
-                        <div class="font-normal text-gray-500">thomes@flowbite.com</div>
-                    </div>
-                </th>
-                <td class="px-6 py-4">
-                <div class="font-normal  text-gray-700 font-semibold">Neil Sims</div>
-                        <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
-                </td>
-                <td class="px-6 py-4">
-                    UI/UX Engineer
-                </td>
-                <td class="px-6 py-4">
-                    <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
-                    </div>
-                </td>
-                <td class="px-6 py-4">
-                <a href="#" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Edit </a>
-                </td>
-            </tr>
-            <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                
-                <th scope="row" class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <img class="w-10 h-10 rounded-full" src="/images/Ellipse 3.png" alt="Rounded avatar">
-                    <div class="pl-3">
-                        <div class="text-base text-gray-700 font-semibold">Leslie Livingston</div>
-                        <div class="font-normal text-gray-500">leslie@flowbite.com</div>
-                    </div>
-                </th>
-                <td class="px-6 py-4">
-                <div class="font-normal  text-gray-700 font-semibold">Neil Sims</div>
-                        <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
-                </td>
-                <td class="px-6 py-4">
-                    SEO Specialist
-                </td>
-                <td class="px-6 py-4">
-                    <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-red-500 mr-2"></div> Offline
-                    </div>
-                </td>
-                <td class="px-6 py-4">
-                <a href="#" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Edit </a>
-                </td>
-            </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
