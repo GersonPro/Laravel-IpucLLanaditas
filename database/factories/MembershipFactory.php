@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Faker\Generator as Faker;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Membership>
@@ -31,7 +33,8 @@ class MembershipFactory extends Factory
             'bir_date' => $this->faker->randomElement(['28/03/2002']),
             'chris_date' => $this->faker->randomElement(['28/03/2002']),
             'h_spirit' => $this->faker->randomElement(['Si']),
-            'is_active' => $this->faker->randomElement(['Si'])
+            'is_active' => $this->faker->randomElement(['Si']),
+            'directive' => $this->faker->randomElement(['Lider de Alabanza', 'Secretario de Alabanza, Vocal de Alabanza '])
         ];
     }
 }

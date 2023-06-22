@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Membership;
 use Illuminate\Http\Request;
 
+
+
 class MembershipController extends Controller
 {
     /**
@@ -62,4 +64,15 @@ class MembershipController extends Controller
     {
         //
     }
+    public function buscarMembresia(Request $request)
+{
+    $search = $request->query('search');
+
+    // Realizar la lógica de búsqueda en la base de datos o en los datos disponibles
+    $results = Membership::where('name', 'like', '%' . $search . '%')->get();
+
+    // Devolver los resultados como respuesta JSON
+    return response()->json($results);
+}
+
 }

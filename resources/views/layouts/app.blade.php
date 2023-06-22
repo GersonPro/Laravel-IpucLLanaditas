@@ -10,13 +10,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="resources/css/app.css">
   <link rel="stylesheet" href="resources/css/style.css">
+
+  
   @vite('resources/css/app.css')
   @vite('resources/css/style.css')
+  <script src="http://[::1]:5173/resources/js/Busqueda.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://right-distinct.tailwindui.com/script.js" data-site="SOXJJCZQ" data-auto="false" defer=""></script>
   <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
   <script type="module" src="https://tailwindui.com/build/assets/app-9780190a.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+  @vite('resources/js/Busqueda.js')
  <style>
  body {
     background-color: #F3F4F6 !important;
@@ -34,7 +38,8 @@
     
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/Busqueda.js'])
+
 </head>
 <body>
     <div id="app">

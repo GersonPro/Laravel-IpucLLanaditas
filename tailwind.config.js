@@ -7,6 +7,7 @@ module.exports = {
     './resources/js/taildwin.js',
     './resources/js/bootstrap.js',
     './resources/js/app.js',
+    './resources/js/Busqueda.js',
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
