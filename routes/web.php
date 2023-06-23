@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\MembershipController;
+use App\Http\Controllers\TablaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,9 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 Route::post('/register', [RegisterController::class, 'register']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/buscar-membresia', [MembershipController::class, 'buscarMembresia']);
+Route::get('/obtener-datos-tabla', [TablaController::class, 'obtenerDatosTabla'])->name('datos-tabla');
+
+
 
 
 
