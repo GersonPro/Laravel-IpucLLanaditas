@@ -22,7 +22,7 @@ class MembershipController extends Controller
      */
     public function create()
     {
-        //
+        return view('Memberships/Create');
     }
 
     /**
@@ -44,9 +44,9 @@ class MembershipController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Membership $membership)
+    public function edit(Membership $member)
     {
-        //
+        return view('Memberships/Edit', compact('member'));
     }
 
     /**

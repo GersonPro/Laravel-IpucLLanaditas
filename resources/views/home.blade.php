@@ -32,7 +32,6 @@
       <!-- aqui empieza la tabla Membresia -->  
    @include('modal.membre')
 
-</div>
 
 
 

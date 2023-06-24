@@ -33,12 +33,6 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/buscar-membresia', [MembershipController::class, 'buscarMembresia']);
 Route::get('/obtener-datos-tabla', [TablaController::class, 'obtenerDatosTabla'])->name('datos-tabla');
 
-
-
-
-
-
-
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('membresia', MembershipController::class);
