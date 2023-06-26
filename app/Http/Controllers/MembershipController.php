@@ -46,6 +46,8 @@ class MembershipController extends Controller
      */
     public function edit(Membership $member)
     {
+
+
         return view('Memberships/Edit', compact('member'));
     }
 
