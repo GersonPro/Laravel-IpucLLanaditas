@@ -46,9 +46,8 @@ class MembershipController extends Controller
      */
     public function edit(Membership $member)
     {
-
-
-        return view('Memberships/Edit', compact('member'));
+      
+        return view('Memberships/Edit', ['member' => $member]);
     }
 
     /**
@@ -56,7 +55,8 @@ class MembershipController extends Controller
      */
     public function update(Request $request, Membership $membership)
     {
-        //
+        // return view('Memberships/Edit', compact('member'));
+        return view('Memberships/Edit', ['member' => $membership]);
     }
 
     /**
