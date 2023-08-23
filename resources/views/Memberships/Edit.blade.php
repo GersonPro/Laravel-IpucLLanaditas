@@ -12,9 +12,8 @@
         <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>
                 <label class="text-gray-700 dark:text-gray-700 font-semibold" for="username">Username</label>
-                
-                <input type="text" name="name" class="rounded border-gray-200 w-full mb-4" value="{{ old('name', $member->name) }}">
-                {{print_r($member)}}
+                <input id="username" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder='{{ $member->name }}'>
+
             </div>
 
             <div>
@@ -82,5 +81,4 @@
 </div>
 </div></div></div>
 @endsection
-
 

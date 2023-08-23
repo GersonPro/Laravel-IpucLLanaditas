@@ -44,10 +44,10 @@ class MembershipController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Membership $member)
+    public function edit(Membership $membresium)
     {
-      
-        return view('Memberships/Edit', ['member' => $member]);
+        // $member->name = $request->input('name');
+        return view('Memberships/Edit', ['member' => $membresium]);
     }
 
     /**
@@ -56,6 +56,23 @@ class MembershipController extends Controller
     public function update(Request $request, Membership $membership)
     {
         // return view('Memberships/Edit', compact('member'));
+          // Actualizar los campos del objeto $membership con los datos del formulario
+    $membership->name = $request->input('name');
+            
+            $membership->l_name= $request->input('l_name');
+            // $membership->name= $request->input('doc_type');
+            // $membership->name= $request->input('doc_number');
+            // $membership->name= $request->input('bir_date');
+            // $membership->name= $request->input('chris_date'); // Fecha de bautizo
+            // $membership->name= $request->input('h_spirit'); // Espiritu santo
+            // $membership->name= $request->input('is_active');
+    // Actualizar otros campos según sea necesario
+
+    // Guardar los cambios en la base de datos
+    $membership->save();
+
+    // Redirigir o devolver una respuesta según tus necesidades
+    return redirect()->route('membresia.edit', $membership->id)->with('success', 'Membership updated successfully');
         return view('Memberships/Edit', ['member' => $membership]);
     }
 
